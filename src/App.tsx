@@ -14,7 +14,7 @@ const App: React.FC = () => {
     setGridColorBG(e.currentTarget.value);
   }, []);
   const background = React.useMemo(() => {
-    return `${gridColorFG} url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><path fill='${encodeURIComponent(gridColorBG)}' d='M0 0h1v1H0zM1 1h1v1H1z'/></svg>") 0 0/${gridSize}`;
+    return `${gridColorFG} url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><path fill='${encodeURIComponent(gridColorBG)}' d='M0 0H1V2H2V1H0Z'/></svg>") 0 0/${gridSize}`;
   }, [gridColorFG, gridColorBG, gridSize]);
   return (
     <div className="App container my-5">
