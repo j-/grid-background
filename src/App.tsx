@@ -79,7 +79,7 @@ const App: React.FC = () => {
           <span style={{ color: '#d4d4d4' }}>&#32;</span>
           <span style={{ color: '#dcdcaa' }}>url</span>
           <span style={{ color: '#d4d4d4' }}>(</span>
-          <span style={{ color: '#ce9178' }}>"data:image/svg+xml,&lt;svg&#32;xmlns='http://www.w3.org/2000/svg'&#32;viewBox='0&#32;0&#32;2&#32;2'&gt;&lt;path&#32;fill='{encodeURIComponent(gridColorBG)}'&#32;d='M0&#32;0h1v1H0zM1&#32;1h1v1H1z'/&gt;&lt;/svg&gt;"</span>
+          <span style={{ color: '#ce9178' }}>"data:image/svg+xml,&lt;svg&#32;xmlns='http://www.w3.org/2000/svg'&#32;viewBox='0&#32;0&#32;2&#32;2'&gt;&lt;path&#32;fill='{encodeURIComponent(gridColorBG)}'&#32;d='M0&#32;0H1V2H2V1H0Z'/&gt;&lt;/svg&gt;"</span>
           <span style={{ color: '#d4d4d4' }}>)&#32;</span>
           <span style={{ color: '#b5cea8' }}>0</span>
           <span style={{ color: '#d4d4d4' }}>&#32;</span>
