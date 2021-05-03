@@ -62,19 +62,32 @@ const App: React.FC = () => {
         </div>
       </form>
 
-      <div className="card card-body bg-dark my-3" style={{
-        fontFamily: 'Consolas, "Courier New", monospace',
-        whiteSpace: 'pre-wrap',
-        overflowX: 'auto',
-        userSelect: 'text',
-        cursor: 'text',
-      }}>
-        <div style={{ userSelect: 'none', pointerEvents: 'none' }}>
+      <div
+        className="card card-body bg-dark my-3"
+        style={{
+          fontFamily: 'Consolas, "Courier New", monospace',
+          whiteSpace: 'pre-wrap',
+          overflowX: 'auto',
+          userSelect: 'all',
+          cursor: 'text',
+        }}
+        onCopy={(e) => {
+          e.clipboardData.setData('vscode-editor-data', JSON.stringify({
+            version: 1,
+            isFromEmptySelection: false,
+            multiCursorText: false,
+            mode: 'css',
+          }));
+          e.clipboardData.setData('text/plain', document.getSelection()?.toString() ?? '');
+          e.preventDefault();
+        }}
+      >
+        <div>
           <span style={{ color: '#d7ba7d' }}>body</span>
           <span style={{ color: '#d4d4d4' }}>&#32;&#123;</span>
         </div>
         <div>
-          <span style={{ color: '#d4d4d4', userSelect: 'none', pointerEvents: 'none' }}>&#32;&#32;</span>
+          <span style={{ color: '#d4d4d4' }}>&#32;&#32;</span>
           <span style={{ color: '#9cdcfe' }}>background</span>
           <span style={{ color: '#d4d4d4' }}>:&#32;</span>
           <span style={{ color: '#ce9178' }}>{gridColorFG}</span>
@@ -90,7 +103,7 @@ const App: React.FC = () => {
           <span style={{ color: '#b5cea8' }}>{gridSize}</span>
           <span style={{ color: '#d4d4d4' }}>;</span>
         </div>
-        <div style={{ userSelect: 'none', pointerEvents: 'none' }}>
+        <div>
           <span style={{ color: '#d4d4d4' }}>&#125;</span>
         </div>
       </div>
